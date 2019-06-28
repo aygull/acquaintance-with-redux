@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Вкладки</title>
+    <script src="node_modules/redux/dist/redux.js"></script>
+
+    <style>
+        .tabs {
+            position: relative;
+        }
+        .tab,
+        .tab-title {
+            display: inline-block;
+        }
+        .tab input[type="radio"] {
+            display: none;
+        }
+        .tab-title {
+            background: #ccc;
+            padding: 5px 10px;
+            border: 1px solid #666;
+            border-bottom: none;
+        }
+        .tab-content {
+            position: absolute;
+            border: 1px solid #666;
+            padding: 10px;
+            left: 0;
+            width: calc(100% - 20px);
+            display: none;
+        }
+        .tab :checked + .tab-title {
+            position: relative;
+            background: #fff;
+            top: 1px;
+            z-index: 1;
+        }
+        .tab :checked ~ .tab-content {
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div class="tabs">
+</div>
+
+<script src="task 01.06.js"></script>
+</body>
+
+</html>
